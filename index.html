@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arun Chouhan | Full Stack Developer</title>
+<meta name="description" content="Portfolio of Arun Chouhan, B.Tech CSE student and aspiring Full Stack Developer from Indore, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F4F8;--surface:#fff;--ink:#14213D;--muted:#55627D;--line:#D8DEEA;--accent:#2F5BEA;--accent2:#FFB100;--on:#fff;
+--head:'Bricolage Grotesque','Trebuchet MS',Arial,sans-serif;--body:'Source Sans 3',Calibri,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1424;--surface:#161E33;--ink:#E8ECF6;--muted:#98A3BE;--line:#26304D;--accent:#7C9AFF;--accent2:#FFC247;--on:#0E1424}}
+:root[data-theme="dark"]{--bg:#0E1424;--surface:#161E33;--ink:#E8ECF6;--muted:#98A3BE;--line:#26304D;--accent:#7C9AFF;--accent2:#FFC247;--on:#0E1424}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-family:var(--head);font-weight:800;text-decoration:none;font-size:20px}
+.links{display:flex;gap:18px;align-items:center;overflow-x:auto}
+.links a{text-decoration:none;color:var(--muted);font-size:16px;white-space:nowrap}
+.links a:hover{color:var(--ink)}
+#theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:6px 10px;font:inherit;font-size:14px;cursor:pointer}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;padding:72px 0 64px}
+h1{font-family:var(--head);font-weight:800;font-size:clamp(44px,8vw,84px);line-height:.98;margin:0 0 18px;letter-spacing:-.025em}
+.role{font-family:var(--head);font-weight:500;font-size:clamp(20px,3vw,26px);margin:0 0 14px}
+.lead{color:var(--muted);max-width:52ch;margin:0 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;border:2px solid var(--ink)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on)}
+.btn:hover{transform:translateY(-2px)}
+.flow{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.flow h2{font-family:var(--head);font-size:16px;margin:0 0 4px}
+.flow p{margin:0 0 16px;color:var(--muted);font-size:15px}
+.node{display:flex;justify-content:space-between;align-items:center;border:2px solid var(--line);border-radius:12px;padding:12px 16px;font-weight:600;opacity:.45;transition:.4s}
+.node small{color:var(--muted);font-weight:400;font-size:14px}
+.node.on{opacity:1;border-color:var(--accent);box-shadow:5px 5px 0 var(--accent2)}
+.wire{width:2px;height:16px;background:var(--line);margin:0 0 0 28px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2.t{font-family:var(--head);font-size:clamp(28px,4vw,38px);margin:0 0 26px;letter-spacing:-.015em}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.about p{margin:0 0 14px;max-width:62ch}
+.facts{list-style:none;margin:0;padding:0}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px}
+.facts span{color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sk{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.sk h3{font-family:var(--head);margin:0 0 12px;font-size:19px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:15px}
+.proj{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:28px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj .meta{color:var(--muted);font-size:15px}
+.proj .meta b{display:block;color:var(--ink);font-family:var(--head);font-size:17px}
+.proj h3{font-family:var(--head);font-size:26px;margin:0 0 6px}
+.proj ul{margin:12px 0 14px;padding-left:20px}
+.proj li{margin-bottom:6px;max-width:66ch}
+.tl{border-left:3px solid var(--accent);padding-left:22px;margin:0 0 4px}
+.tl div{margin-bottom:22px;position:relative}
+.tl div::before{content:"";position:absolute;left:-30px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent2);border:2px solid var(--bg)}
+.tl b{font-family:var(--head);font-size:19px}
+.tl span{display:block;color:var(--muted);font-size:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.two ul{padding-left:20px;margin:0}
+.two li{margin-bottom:8px}
+.two h3{font-family:var(--head);margin:0 0 12px}
+.contact{background:var(--ink);color:var(--bg);border-radius:20px;padding:44px 32px;margin:10px 0 60px}
+.contact h2{font-family:var(--head);font-size:clamp(28px,5vw,46px);margin:0 0 10px;line-height:1.05}
+.contact p{margin:0 0 22px;opacity:.8}
+.contact .btn{border-color:var(--bg);color:var(--bg)}
+.contact .btn.main{background:var(--accent2);border-color:var(--accent2);color:#14213D}
+footer{text-align:center;color:var(--muted);font-size:15px;padding-bottom:30px}
+@media (max-width:760px){.hero,.about,.two,.skills{grid-template-columns:1fr}.proj{grid-template-columns:1fr;gap:6px}.hero{padding-top:40px}.links a.h{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#top">Arun Chouhan</a>
+<div class="links"><a class="h" href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a class="h" href="#education">Education</a><a href="#contact">Contact</a><button id="theme" type="button" aria-label="Switch light or dark theme">Theme</button></div></div></nav>
+
+<main class="wrap" id="top">
+<div class="hero">
+ <div>
+  <h1>Arun Chouhan</h1>
+  <p class="role">Full Stack Developer in the making</p>
+  <p class="lead">B.Tech Computer Science student from Indore. I build web apps with React, Node.js, Express.js, MongoDB and MySQL, and I like turning real-world problems into working software.</p>
+  <div class="btns"><a class="btn main" href="#projects">See my projects</a><a class="btn" href="https://github.com/Arunchouhan7" target="_blank" rel="noopener">GitHub profile</a></div>
+ </div>
+ <div class="flow" aria-label="Full stack architecture I work with">
+  <h2>The stack I build with</h2><p>From the browser to the database</p>
+  <div class="node" data-n><span>React <small>Frontend</small></span><small>UI</small></div><div class="wire"></div>
+  <div class="node" data-n><span>Node.js + Express.js <small>Backend</small></span><small>Server</small></div><div class="wire"></div>
+  <div class="node" data-n><span>MongoDB / MySQL <small>Database</small></span><small>Data</small></div>
+ </div>
+</div>
+
+<section id="about"><h2 class="t">About me</h2>
+ <div class="about">
+  <div><p>I am a third-year B.Tech student in Computer Science &amp; Engineering at AITR, Indore. I enjoy learning new technologies quickly and applying them in real projects.</p>
+  <p>My projects include a Digital FIR System with Digital Signature, OCR and Aadhaar-based authentication, and Kisan Setu, a marketplace that lets farmers sell directly to consumers.</p>
+  <p>I am looking for software developer, web developer and full stack roles where I can contribute and keep growing.</p></div>
+  <ul class="facts"><li><span>Based in</span>Indore, India</li><li><span>Degree</span>B.Tech CSE, 2023 to 2027</li><li><span>Focus</span>Full stack web development</li><li><span>Languages</span>Hindi, English</li><li><span>Interests</span>Web development, AI tools</li></ul>
+ </div>
+</section>
+
+<section id="skills"><h2 class="t">Skills</h2>
+ <div class="skills">
+  <div class="sk"><h3>Languages</h3><div class="chips"><span>JavaScript</span><span>Java</span><span>SQL</span></div></div>
+  <div class="sk"><h3>Frontend</h3><div class="chips"><span>React</span><span>HTML</span></div></div>
+  <div class="sk"><h3>Backend</h3><div class="chips"><span>Node.js</span><span>Express.js</span></div></div>
+  <div class="sk"><h3>Databases</h3><div class="chips"><span>MongoDB</span><span>MySQL</span></div></div>
+  <div class="sk"><h3>Tools</h3><div class="chips"><span>Git</span><span>GitHub</span></div></div>
+  <div class="sk"><h3>Core CS</h3><div class="chips"><span>OOP</span><span>DBMS</span></div></div>
+ </div>
+</section>
+
+<section id="projects"><h2 class="t">Projects</h2>
+ <article class="proj">
+  <div class="meta"><b>2 months</b>Minor project<br>Role: Frontend developer</div>
+  <div><h3>Digital FIR System</h3>
+   <div class="chips"><span>React</span><span>Node.js</span><span>Express.js</span><span>MySQL</span></div>
+   <ul><li>Built the frontend of a Virtual Police Station System where citizens can use secure online FIR services.</li>
+   <li>Integrated Digital Signature, OCR and Aadhaar-based authentication.</li>
+   <li>Worked in a full stack setup with a Node.js and Express.js backend and a MySQL database.</li></ul></div>
+ </article>
+ <article class="proj">
+  <div class="meta"><b>2 to 3 months</b>Minor project<br>Role: Frontend developer</div>
+  <div><h3>Kisan Setu</h3>
+   <div class="chips"><span>JavaScript</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span></div>
+   <ul><li>Built the frontend of an online marketplace where farmers sell their products directly to consumers.</li>
+   <li>Connected the interface to Node.js and Express.js services and a MongoDB database.</li></ul></div>
+ </article>
+</section>
+
+<section id="education"><h2 class="t">Education and achievements</h2>
+ <div class="two">
+  <div><h3>Education</h3><div class="tl">
+   <div><b>B.Tech, Computer Science &amp; Engineering</b><span>AITR, Indore (RGPV, Bhopal) | 2023 to 2027</span></div>
+   <div><b>Higher Secondary (HSC)</b><span>Saraswati Vidya Mandir, MP Board | 2022 | 73.00%</span></div>
+   <div><b>Secondary (SSC)</b><span>Yashaswi Vidya Mandir, MP Board | 2020 | 89.30%</span></div></div></div>
+  <div><h3>Certifications</h3><ul><li>NPTEL: DBMS and Java</li><li>Spoken Tutorial: HTML, C++ and Java</li></ul>
+   <h3 style="margin-top:22px">Achievements</h3><ul><li>Participated in Smart India Hackathon</li><li>Participated in Code Relay Hackathon</li><li>Silver Medal, Programming Quiz by CSI</li></ul></div>
+ </div>
+</section>
+
+<section id="contact" style="border-top:0;padding-bottom:0"><div class="contact">
+ <h2>Let's build something together</h2><p>Open to internships, graduate software roles and full stack opportunities.</p>
+ <div class="btns"><a class="btn main" href="mailto:chouhanarun9907@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/arun-chouhan-929a92287/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/Arunchouhan7" target="_blank" rel="noopener">GitHub</a><a class="btn" href="tel:+917828113762">Call +91 78281 13762</a></div>
+</div></section>
+<footer>Arun Chouhan | Indore, India</footer>
+</main>
+<script>
+(function(){var n=[].slice.call(document.querySelectorAll('[data-n]'));n.forEach(function(e,i){setTimeout(function(){e.classList.add('on')},500+i*550)});
+document.getElementById('theme').addEventListener('click',function(){var r=document.documentElement,d=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);r.setAttribute('data-theme',d?'light':'dark')});})();
+</script>
+</body>
+</html>
